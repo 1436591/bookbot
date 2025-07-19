@@ -6,9 +6,9 @@ def get_book_text(book_id):
         return contents
     
 def main():
-    book = input("Please enter bookname in lowercase as a .txt file")
+    # book = input("Please enter bookname in lowercase as a .txt file")
     # text = get_book_text(f"books/{book}")
-    text = get_book_text("books/frankentstein.txt")
+    text = get_book_text("books/frankenstein.txt")
     num_words = word_count(text)
     sorted_dic = sort_dic(text)
     print("============ BOOKBOT =============")
@@ -16,6 +16,6 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
-    
+
 
 main()
