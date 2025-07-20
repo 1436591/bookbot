@@ -7,7 +7,7 @@ def sort_on(items):
 
 def char_count(text):
     words = text.split()
-    new_words = []
+    lower_words = []
     chars = [      
         {"name": "a", "num": 0},
         {"name": "b", "num": 0},
@@ -37,16 +37,16 @@ def char_count(text):
         {"name": "z", "num": 0},
         ]
     for word in words:
-        new_words.append(word.lower())
-    for word in new_words:
-        for x in word:
-            for char in chars:
-                if x == char["name"]:
-                    char["num"] += 1
+        lower_words.append(word.lower())
+    for word in lower_words:
+        for char in word:
+            for c in chars:
+                if char == c["name"]:
+                    c["num"] += 1
     return chars
 
 def sort_dic(text):
     chars = char_count(text)
     chars.sort(reverse=True, key=sort_on)
     return chars
-    
+

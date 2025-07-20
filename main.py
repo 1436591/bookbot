@@ -1,6 +1,11 @@
 from stats import *
 import sys
-
+"""
+Brayden Oathout
+7/19/2025
+First BootDev/Github Project
+Bookbot
+"""
 def get_book_text(book_id):
     with open(book_id) as f:
         contents = f.read()
