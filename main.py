@@ -1,4 +1,5 @@
 from stats import *
+import sys
 
 def get_book_text(book_id):
     with open(book_id) as f:
@@ -6,13 +7,16 @@ def get_book_text(book_id):
         return contents
     
 def main():
-    # book = input("Please enter bookname in lowercase as a .txt file")
-    # text = get_book_text(f"books/{book}")
-    text = get_book_text("books/frankenstein.txt")
+    try:
+        book = sys.argv[1]
+    except IndexError:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    text = get_book_text(book)
     num_words = word_count(text)
     sorted_dic = sort_dic(text)
     print("============ BOOKBOT =============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {book}")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")

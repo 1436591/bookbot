@@ -35,19 +35,6 @@ def char_count(text):
         {"name": "x", "num": 0},
         {"name": "y", "num": 0},
         {"name": "z", "num": 0},
-        {"name": "!", "num": 0},
-        {"name": ".", "num": 0},
-        {"name": "?", "num": 0},
-        {"name": ",", "num": 0},
-        {"name": "1", "num": 0},
-        {"name": "2", "num": 0},
-        {"name": "3", "num": 0},
-        {"name": "4", "num": 0},
-        {"name": "5", "num": 0},
-        {"name": "6", "num": 0},
-        {"name": "7", "num": 0},
-        {"name": "8", "num": 0},
-        {"name": "9", "num": 0}
         ]
     for word in words:
         new_words.append(word.lower())
