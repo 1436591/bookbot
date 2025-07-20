@@ -2,6 +2,9 @@ def word_count(text):
     words = text.split()
     return len(words)
 
+def sort_on(items):
+    return items["num"]
+
 def char_count(text):
     words = text.split()
     new_words = []
@@ -32,7 +35,6 @@ def char_count(text):
         {"name": "x", "num": 0},
         {"name": "y", "num": 0},
         {"name": "z", "num": 0},
-        {"name": " ", "num": 0},
         {"name": "!", "num": 0},
         {"name": ".", "num": 0},
         {"name": "?", "num": 0},
@@ -57,7 +59,7 @@ def char_count(text):
     return chars
 
 def sort_dic(text):
-    char_count_dic = char_count(text)
-    sorted_dic = sorted(char_count_dic, key=lambda x: x["num"], reverse=True)
-    return sorted_dic
+    chars = char_count(text)
+    chars.sort(reverse=True, key=sort_on)
+    return chars
     

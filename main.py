@@ -16,6 +16,10 @@ def main():
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words")
     print("--------- Character Count -------")
-
-
+    for d in sorted_dic:
+        character = d["name"]
+        count = d["num"]
+        if character.isalpha():
+            print(f"{character}: {count}")
+    print("============= END ===============")
 main()
